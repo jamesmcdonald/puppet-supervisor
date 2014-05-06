@@ -3,6 +3,7 @@ define supervisor::program(
     $directory = undef,
     $user = undef,
     $ensure = present,
+    $environment = undef,
 ) {
     include supervisor
     Class['supervisor'] -> Supervisor::Program[$title]
